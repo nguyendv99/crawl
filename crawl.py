@@ -33,7 +33,7 @@ with open('data.csv', 'w', encoding="utf-8") as file:
 			break
 		
 		for tweet in newTweets:
-			w.writerow([tweet.id_str, tweet.full_text.replace('\n',' ').encode('utf-8')])
+			w.writerow([tweet.id_str, tweet.full_text.replace('\n',' ')])
 
 		tweetCount += len(newTweets)	
 		maxId = newTweets[-1].id
